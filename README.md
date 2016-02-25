@@ -2,7 +2,7 @@
 
 This repository is a simple "hello, world!" template for a game made with Phaser.
 All the code lives in the `gh-pages` branch. This lets you run your games directly from github!
-Check it out: http://gmu-cs325.github.io/digital-template/
+Check it out: http://krypticwolf3.github.io/TheElements2/
 Fork this repository, checkout the `gh-pages` branch, and start making your own game!
 
 You can't run the `index.html` directly from your local machine without a local webserver.
