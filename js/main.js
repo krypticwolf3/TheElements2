@@ -93,12 +93,12 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, cr
 
 function preload () {
 
-    game.load.atlas('tank', 'assets/tanks/tanks.png', 'assets/tanks/tanks.json');
-    game.load.atlas('enemy', 'assets/tanks/enemy-tanks.png', 'assets/tanks/tanks.json');
-    game.load.image('logo', 'assets/tanks/logo.png');
-    game.load.image('bullet', 'assets/tanks/bullet.png');
-    game.load.image('earth', 'assets/tanks/scorched_earth.png');
-    game.load.spritesheet('kaboom', 'assets/tanks/explosion.png', 64, 64, 23);
+    game.load.atlas('tank', 'http://krypticwolf3.github.com/TheElements/gh-pages/assets/tanks/tanks.png', 'http://krypticwolf3.github.com/TheElements/gh-pages/assets/tanks/tanks.json');
+    game.load.atlas('enemy', 'assets/tanks/enemy-tanks.png', 'http://krypticwolf3.github.com/TheElements/gh-pages/assets/tanks/tanks.json');
+    game.load.image('logo', 'http://krypticwolf3.github.com/TheElements/gh-pages/assets/tanks/logo.png');
+    game.load.image('bullet', 'http://krypticwolf3.github.com/TheElements/gh-pages/assets/tanks/bullet.png');
+    game.load.image('earth', 'http://krypticwolf3.github.com/TheElements/gh-pages/assets/tanks/scorched_earth.png');
+    game.load.spritesheet('kaboom', 'http://krypticwolf3.github.com/TheElements/gh-pages/assets/tanks/explosion.png', 64, 64, 23);
     
 }
 
