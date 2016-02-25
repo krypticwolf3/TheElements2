@@ -10,8 +10,6 @@ window.onload = function() {
     // You will need to change the paths you pass to "game.load.image()" or any other
     // loading functions to reflect where you are putting the assets.
     // All loading functions will typically all be found inside "preload()".
-    
-    "use strict";
 
 EnemyTank = function (index, game, player, bullets) {
 
@@ -91,7 +89,7 @@ EnemyTank.prototype.update = function() {
 
 };
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'TheElements2', { preload: preload, create: create, update: update, render: render });
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update, render: render });
 
 function preload () {
 
