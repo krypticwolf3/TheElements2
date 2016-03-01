@@ -82,7 +82,6 @@ window.onload = function() {
 
                 var bullet = this.bullets.getFirstDead();
 
-                bullet.reset(this.turret.x, this.turret.y);
 
                 bullet.rotation = this.game.physics.arcade.moveToObject(bullet, this.player, 500);
             }
