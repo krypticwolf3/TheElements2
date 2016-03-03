@@ -25,9 +25,11 @@ window.onload = function() {
         this.nextFire = 0;
         this.alive = true;
 
-        //this.shadow = game.add.sprite(x, y, 'enemy', 'shadow');
-        this.tank = game.add.sprite(x, y, 'earth_elem', 'earth_elem1');
-        //this.turret = game.add.sprite(x, y, 'enemy', 'turret');
+        this.shadow = game.add.sprite(x, y, 'enemy', 'shadow');
+        this.tank = game.add.sprite(x, y, 'elements', 'elem_earth');
+        this.turret = game.add.sprite(x, y, 'enemy', 'turret');
+
+        this.tank.animations.add('move', ['elem_earth'], 20, true);
 
         this.shadow.anchor.set(0.5);
         this.tank.anchor.set(0.5);
