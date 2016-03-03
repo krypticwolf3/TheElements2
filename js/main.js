@@ -25,9 +25,9 @@ window.onload = function() {
         this.nextFire = 0;
         this.alive = true;
 
-        this.shadow = game.add.sprite(x, y, 'enemy', 'shadow');
+        //this.shadow = game.add.sprite(x, y, 'enemy', 'shadow');
         this.tank = game.add.sprite(x, y, 'earth_elem', 'earth_elem1');
-        this.turret = game.add.sprite(x, y, 'enemy', 'turret');
+        //this.turret = game.add.sprite(x, y, 'enemy', 'turret');
 
         this.shadow.anchor.set(0.5);
         this.tank.anchor.set(0.5);
