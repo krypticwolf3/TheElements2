@@ -1,19 +1,21 @@
 {"frames": [
 
 {
-	"filename": "earth_elem1",
-	"frame": {"x":0,"y":0,"w":24,"h":22},
+	"filename": "elem_earth.png",
+	"frame": {"x":1,"y":1,"w":48,"h":22},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":22},
-	"sourceSize": {"w":48,"h":22}
-},
-{
-	"filename": "earth_elem2",
-	"frame": {"x":25,"y":0,"w":24,"h":22},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":22},
-	"sourceSize": {"w":48,"h":22}
-}]
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":22},
+	"sourceSize": {"w":48,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "elements.png",
+	"format": "RGBA8888",
+	"size": {"w":50,"h":24},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:a766ac63443540fd03f9891e80f435dc:5b517e005bb21047f0a2e2159036ce16:5b2f3c13e8b86e4c74f43dc8b276d9b9$"
+}
 }
