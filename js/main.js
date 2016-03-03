@@ -29,7 +29,7 @@ window.onload = function() {
         this.tank = game.add.sprite(x, y, 'elements', 'elem_earth');
         this.turret = game.add.sprite(x, y, 'enemy', 'turret');
 
-        this.tank.animations.add('move', ['elem_earth'], 20, true);
+        //this.tank.animations.add('move', ['elem_earth'], 20, true);
 
         this.shadow.anchor.set(0.5);
         this.tank.anchor.set(0.5);
@@ -97,7 +97,7 @@ window.onload = function() {
 
         game.load.atlas('tank', 'assets/tanks/tanks.png', 'assets/tanks/tanks.json');
         game.load.atlas('enemy', 'assets/tanks/tanks.png', 'assets/tanks/tanks.json');
-        game.load.atlas('elements', 'assets/tanks/earth_elem.png', 'assets/tanks/elements.json');
+        game.load.image('elements', 'assets/tanks/elem_earth.png');
         game.load.image('logo', 'assets/tanks/logo.png');
         game.load.image('bullet', 'assets/tanks/bullet.png');
         game.load.image('earth', 'assets/tanks/scorched_earth.png');
