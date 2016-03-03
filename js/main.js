@@ -26,7 +26,7 @@ window.onload = function() {
         this.alive = true;
 
         this.shadow = game.add.sprite(x, y, 'enemy', 'shadow');
-        this.tank = game.add.sprite(x, y, 'enemy', 'tank1');
+        this.tank = game.add.sprite(x, y, 'earth_elem', 'earth_elem1');
         this.turret = game.add.sprite(x, y, 'enemy', 'turret');
 
         this.shadow.anchor.set(0.5);
@@ -94,7 +94,8 @@ window.onload = function() {
     function preload () {
 
         game.load.atlas('tank', 'assets/tanks/tanks.png', 'assets/tanks/tanks.json');
-        game.load.image('enemy', 'assets/tanks/earth_elem.png', 'assets/tanks/tanks.json');
+        game.load.atlas('enemy', 'assets/tanks/tanks.png', 'assets/tanks/tanks.json');
+        game.load.atlas('elements', 'assets/tanks/earth_elem.png', 'assets/tanks/elements.json');
         game.load.image('logo', 'assets/tanks/logo.png');
         game.load.image('bullet', 'assets/tanks/bullet.png');
         game.load.image('earth', 'assets/tanks/scorched_earth.png');
@@ -134,7 +135,7 @@ window.onload = function() {
         //  The base of our tank
         tank = game.add.sprite(0, 0, 'tank', 'tank1');
         tank.anchor.setTo(0.5, 0.5);
-        tank.animations.add('move', ['tank1', 'tank2', 'tank3', 'tank4', 'tank5', 'tank6'], 20, true);
+        tank.animations.add('move', ['tank1', 'tank2', 'tank3', 'tank4', 'tank5', ], 20, true);
 
         //  This will force it to decelerate and limit its speed
         game.physics.enable(tank, Phaser.Physics.ARCADE);
@@ -165,7 +166,7 @@ window.onload = function() {
 
         for (var i = 0; i < enemiesTotal; i++)
         {
-            enemies.push(new EnemyTank(i, game, tank, enemyBullets));
+            enemies.push(new EnemyTank(i, game, elements, enemyBullets));
         }
 
         //  A shadow below our tank
