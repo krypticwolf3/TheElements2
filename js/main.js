@@ -26,7 +26,7 @@ window.onload = function() {
         this.alive = true;
 
         this.shadow = game.add.sprite(x, y, 'enemy', 'shadow');
-        this.tank = game.add.sprite(x, y, 'elements', 'elem_earth');
+        this.tank = game.add.sprite(x, y, 'enemy', 'tank1');
         this.turret = game.add.sprite(x, y, 'enemy', 'turret');
 
         //this.tank.animations.add('move', ['elem_earth'], 20, true);
