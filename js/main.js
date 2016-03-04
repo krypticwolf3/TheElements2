@@ -12,7 +12,7 @@ window.onload = function() {
     // All loading functions will typically all be found inside "preload()".
     
 
-EnemyTank = function (index, game, player, bullets) {
+  EnemyTank = function (index, game, player, bullets) {
 
     var x = game.world.randomX;
     var y = game.world.randomY;
@@ -43,9 +43,9 @@ EnemyTank = function (index, game, player, bullets) {
 
     game.physics.arcade.velocityFromRotation(this.tank.rotation, 100, this.tank.body.velocity);
 
-};
+  }
 
-EnemyTank.prototype.damage = function() {
+  EnemyTank.prototype.damage = function() {
 
     this.health -= 1;
 
@@ -62,9 +62,9 @@ EnemyTank.prototype.damage = function() {
 
     return false;
 
-}
+  }
 
-EnemyTank.prototype.update = function() {
+  EnemyTank.prototype.update = function() {
 
     this.shadow.x = this.tank.x;
     this.shadow.y = this.tank.y;
@@ -88,11 +88,11 @@ EnemyTank.prototype.update = function() {
         }
     }
 
-};
+  }
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+  var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update, render: render });
 
-function preload () {
+  function preload () {
 
     game.load.atlas('tank', 'assets/games/tanks/tanks.png', 'assets/games/tanks/tanks.json');
     game.load.atlas('enemy', 'assets/games/tanks/enemy-tanks.png', 'assets/games/tanks/tanks.json');
@@ -101,30 +101,30 @@ function preload () {
     game.load.image('earth', 'assets/games/tanks/scorched_earth.png');
     game.load.spritesheet('kaboom', 'assets/games/tanks/explosion.png', 64, 64, 23);
     
-}
+  }
 
-var land;
+  var land;
 
-var shadow;
-var tank;
-var turret;
+  var shadow;
+  var tank;
+  var turret;
 
-var enemies;
-var enemyBullets;
-var enemiesTotal = 0;
-var enemiesAlive = 0;
-var explosions;
+  var enemies;
+  var enemyBullets;
+  var enemiesTotal = 0;
+  var enemiesAlive = 0;
+  var explosions;
 
-var logo;
+  var logo;
 
-var currentSpeed = 0;
-var cursors;
+  var currentSpeed = 0;
+  var cursors;
 
-var bullets;
-var fireRate = 100;
-var nextFire = 0;
+  var bullets;
+  var fireRate = 100;
+  var nextFire = 0;
 
-function create () {
+  function create () {
 
     //  Resize our game world to be a 2000 x 2000 square
     game.world.setBounds(-1000, -1000, 2000, 2000);
@@ -208,16 +208,16 @@ function create () {
 
     cursors = game.input.keyboard.createCursorKeys();
 
-}
+  }
 
-function removeLogo () {
+  function removeLogo () {
 
     game.input.onDown.remove(removeLogo, this);
     logo.kill();
 
-}
+  }
 
-function update () {
+  function update () {
 
     game.physics.arcade.overlap(enemyBullets, tank, bulletHitPlayer, null, this);
 
@@ -280,15 +280,15 @@ function update () {
         fire();
     }
 
-}
+  }
 
-function bulletHitPlayer (tank, bullet) {
+  function bulletHitPlayer (tank, bullet) {
 
     bullet.kill();
 
-}
+  }
 
-function bulletHitEnemy (tank, bullet) {
+  function bulletHitEnemy (tank, bullet) {
 
     bullet.kill();
 
@@ -301,9 +301,9 @@ function bulletHitEnemy (tank, bullet) {
         explosionAnimation.play('kaboom', 30, false, true);
     }
 
-}
+  }
 
-function fire () {
+  function fire () {
 
     if (game.time.now > nextFire && bullets.countDead() > 0)
     {
@@ -316,14 +316,14 @@ function fire () {
         bullet.rotation = game.physics.arcade.moveToPointer(bullet, 1000, game.input.activePointer, 500);
     }
 
-}
+  }
 
-function render () {
+  function render () {
 
     // game.debug.text('Active Bullets: ' + bullets.countLiving() + ' / ' + bullets.length, 32, 32);
     game.debug.text('Enemies: ' + enemiesAlive + ' / ' + enemiesTotal, 32, 32);
 
-}
+  }
 
 
 };
