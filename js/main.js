@@ -94,8 +94,8 @@ window.onload = function() {
 
   function preload () {
 
-    game.load.atlas('tank', 'assets/tanks/tanks.png', 'assets/games/tanks/tanks.json');
-    game.load.atlas('enemy', 'assets/tanks/enemy-tanks.png', 'assets/games/tanks/tanks.json');
+    game.load.atlas('tank', 'assets/tanks/tanks.png', 'assets/tanks/tanks.json');
+    game.load.atlas('enemy', 'assets/tanks/enemy-tanks.png', 'assets/tanks/tanks.json');
     game.load.image('logo', 'assets/tanks/logo.png');
     game.load.image('bullet', 'assets/tanks/bullet.png');
     game.load.image('earth', 'assets/tanks/scorched_earth.png');
