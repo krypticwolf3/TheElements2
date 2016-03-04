@@ -43,7 +43,7 @@ window.onload = function() {
 
     game.physics.arcade.velocityFromRotation(this.tank.rotation, 100, this.tank.body.velocity);
 
-  }
+  };
 
   EnemyTank.prototype.damage = function() {
 
@@ -62,7 +62,7 @@ window.onload = function() {
 
     return false;
 
-  }
+  };
 
   EnemyTank.prototype.update = function() {
 
@@ -88,7 +88,7 @@ window.onload = function() {
         }
     }
 
-  }
+  };
 
   var game = new Phaser.Game(800, 600, Phaser.AUTO, 'game', { preload: preload, create: create, update: update, render: render });
 
